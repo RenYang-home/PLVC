@@ -2,13 +2,13 @@
 
 The project page for the paper:
 
-> Ren Yang, Luc Van Gool and Radu Timofte, "Perceptual Learned Video Compression with Recurrent Conditional GAN", arXiv preprint arXiv:2109.03082, 2021. [[Paper]](https://arxiv.org/abs/2109.03082)
+> Ren Yang, Radu Timofte and Luc Van Gool, "Perceptual Learned Video Compression with Recurrent Conditional GAN", arXiv preprint arXiv:2109.03082, 2021. [[Paper]](https://arxiv.org/abs/2109.03082)
 
 If our paper is useful for your research, please cite:
 ```
 @article{yang2021perceptual,
   title={Perceptual Video Compression with Recurrent Conditional GAN},
-  author={Yang, Ren and Van Gool, Luc and Timofte, Radu},
+  author={Yang, Ren and Timofte, Radu and Van Gool, Luc},
   journal={arXiv preprint arXiv:2109.03082},
   year={2021}
 }
