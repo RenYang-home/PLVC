@@ -6,11 +6,11 @@ The project page for the paper:
 
 If our paper is useful for your research, please cite:
 ```
-@article{yang2021perceptual,
+@article{yang2022perceptual,
   title={Perceptual Video Compression with Recurrent Conditional GAN},
   author={Yang, Ren and Timofte, Radu and Van Gool, Luc},
   journal={arXiv preprint arXiv:2109.03082},
-  year={2021}
+  year={2022}
 }
 ```
 
