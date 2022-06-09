@@ -2,19 +2,19 @@
 
 The project page for the paper:
 
-> Ren Yang, Radu Timofte and Luc Van Gool, "Perceptual Learned Video Compression with Recurrent Conditional GAN", arXiv preprint arXiv:2109.03082, 2021. [[Paper]](https://arxiv.org/abs/2109.03082)
+> Ren Yang, Radu Timofte and Luc Van Gool, "Perceptual Learned Video Compression with Recurrent Conditional GAN", in Processings of the International Joint Conference on Artificial Intelligence (IJCAI), 2022. [[Paper]](https://arxiv.org/abs/2109.03082)
 
 If our paper is useful for your research, please cite:
 ```
-@article{yang2022perceptual,
+@inproceedings{yang2022perceptual,
   title={Perceptual Video Compression with Recurrent Conditional GAN},
   author={Yang, Ren and Timofte, Radu and Van Gool, Luc},
-  journal={arXiv preprint arXiv:2109.03082},
+  booktitle={Processings of the International Joint Conference on Artificial Intelligence (IJCAI)},
   year={2022}
 }
 ```
 
-We will release the training and test codes with pre-trained models upon acceptance.
+We will release the training and test codes with pre-trained models soon.
 
 If you have questions, please contact:
 
