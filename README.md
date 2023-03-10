@@ -20,6 +20,10 @@ Ren Yang @ ETH Zurich, Switzerland
 
 Email: ren.yang@vision.ee.ethz.ch
 
+#### Acknowledgement
+
+The our discriminator, included in the folder "hific", is built upon [HiFiC](https://hific.github.io/).
+
 ## Codes
 
 ### Training data
@@ -55,9 +59,21 @@ np.save('folder.npy', folder)
   (*Since we use misc.imread, do not use higher versions in which misc.imread is removed.*)
   
  - Pre-trained models by MSE loss ([Download link](https://data.vision.ee.ethz.ch/reyang/model.zip))
-
-  (*Download the folder "model" to the same directory as the codes.*)
+ 
+      (*Download the folder "model" to the same directory as the codes.*)
   
  - compare-gan 3.0
  
  - lpips-tensorflow (https://github.com/alexlee-gk/lpips-tensorflow)
+ 
+### Training
+ 
+```
+python PLVC_training.py --q mi
+```
+
+The PLVC has three quality configurations, i.e., "lo", "mi" and "hi" for low-, medium- and high-quality models, respectively.
+
+### Test
+
+Coming soon.
