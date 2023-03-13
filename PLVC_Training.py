@@ -53,7 +53,7 @@ def read_png(path):
     return tf.stack(image_group, axis=0)
 
 # with tf.device("/cpu:0"):
-train_files = np.load('/scratch_net/maja_second/compression/models/folder_vimeo.npy').tolist()
+train_files = np.load('folder.npy').tolist()
 
 train_dataset = tf.data.Dataset.from_tensor_slices(train_files)
 train_dataset = train_dataset.shuffle(buffer_size=len(train_files)).repeat()
@@ -228,14 +228,14 @@ tf.summary.scalar('Dloss', DIS_loss/(F_num - 1))
 tf.summary.scalar('Gloss', GAN_loss/(F_num - 1))
 tf.summary.scalar('lpips', LPIPS/(F_num - 1))
 
-save_path = './model/RAE_GAN_' + str(args.q)
+save_path = './PLVC_model/RAE_GAN_' + str(args.q)
 os.makedirs(save_path, exist_ok=True)
 
 if args.q == 'lo': l = 256
 elif args.q == 'mi': l = 512
 else: l = 1024
 
-restore_path = '/srv/beegfs-benderdata/scratch/reyang_data/data/RLVC/model/RAE_PSNR_' + str(l)
+restore_path = './model/RAE_PSNR_' + str(l)
 saver_restore = tf.train.Saver(var_list=EGP_var, max_to_keep=None)
 
 def load_model(scaffold, session):
@@ -258,5 +258,3 @@ with tf.train.MonitoredTrainingSession(
     while not sess.should_stop():
         sess.run(train_D_op)
         sess.run(train_EGP_op)
-
-        print('running')
