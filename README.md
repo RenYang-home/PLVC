@@ -76,4 +76,6 @@ The PLVC has three quality configurations, i.e., "lo", "mi" and "hi" for low-, m
 
 ### Test
 
-Coming soon.
+Pre-trained models: https://data.vision.ee.ethz.ch/reyang/PLVC_model.zip
+
+Test code: Coming soon.
