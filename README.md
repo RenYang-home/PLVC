@@ -22,7 +22,7 @@ Email: ren.yang@vision.ee.ethz.ch
 
 #### Acknowledgement
 
-The our discriminator, included in the folder "hific", is built upon [HiFiC](https://hific.github.io/).
+Our discriminator, included in the folder "hific", is built upon [HiFiC](https://hific.github.io/).
 
 ## Codes
 
