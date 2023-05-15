@@ -18,7 +18,7 @@ If you have questions, please contact:
 
 Ren Yang @ ETH Zurich, Switzerland   
 
-Email: ren.yang@vision.ee.ethz.ch
+Email: r.yangchn@gmail.com
 
 #### Acknowledgement
 
