@@ -78,4 +78,13 @@ The PLVC has three quality configurations, i.e., "lo", "mi" and "hi" for low-, m
 
 Pre-trained models: [https://data.vision.ee.ethz.ch/reyang/PLVC_model.zip](https://drive.google.com/file/d/1ctVgz7uZh3Oz9uV99cc1cQeDZPOyVeQr/view?usp=sharing)
 
-Test code: Coming soon.
+Test code: 
+
+The backbone (generator) of PLVC has the same architecture as [RLVC](https://github.com/RenYang-home/RLVC/). Therefore the pre-trained PLVC models can be directly loaded and tested by the inference code of RLVC, with the following adjustments:
+
+1. In PLVC, we use bi-IPPP with GOP = 9, hence set both "--f_p" and "--b_p" to 4 in [RLVC.py](https://github.com/RenYang-home/RLVC/blob/master/RLVC.py#L8).
+2. The PLVC models are fine-tuned from the PSNR-optimized RLVC models, and the "lo", "mi" and "hi" quality models corresponds to lambda = 256, 512 and 1024, respectively. Therefore, set "--l" in [RLVC.py](https://github.com/RenYang-home/RLVC/blob/master/RLVC.py#L14) to 256, 512 or 1024 according to the quality setting of PLVC.
+3. Compress the I-frames (every 9 frames) by HiFiC at the corresponding quality ("lo", "mi" and "hi" models of HiFiC corresponds to the "lo", "mi" and "hi" models of PLVC, respectively). Save the compressed frames (e.g., f001.png, f010.png, f019.png, etc.) to "path_com" defined [here](https://github.com/RenYang-home/RLVC/blob/master/helper.py#L29), and the compressed bitstream (e.g., f001.bin, f010.bin, f019.bin, etc.) to "path_bin" defined [here](to "path_com" defined [here](https://github.com/RenYang-home/RLVC/blob/master/helper.py#L29)).
+4. Change the [model path](https://github.com/RenYang-home/RLVC/blob/master/Recurrent_AutoEncoder.py#L114) to the downloaded PLVC models.
+5. Comment (or delete) the codes that compress I-frames by BPG at [line 77 to 90 in helper.py](https://github.com/RenYang-home/RLVC/blob/master/helper.py#L77).
+6. Then, run [RLVC.py](https://github.com/RenYang-home/RLVC/blob/master/RLVC.py) to test PLVC.
